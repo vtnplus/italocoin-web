@@ -303,7 +303,7 @@ switch (ENVIRONMENT)
 		exit(3); // EXIT_CONFIG
 	}
 
-	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+	define('VIEWPATH', FCPATH."/template/".DIRECTORY_SEPARATOR);
 
 /*
  * --------------------------------------------------------------------
@@ -312,4 +312,5 @@ switch (ENVIRONMENT)
  *
  * And away we go...
  */
+require_once FCPATH.'/vendor/autoload.php';
 require_once BASEPATH.'core/CodeIgniter.php';

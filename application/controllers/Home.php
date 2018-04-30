@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Home extends CI_Controller {
+use Apps\Controller;
+class Home extends Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,8 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->header();
+		$this->load->view('home',["menu"]);
+		$this->footer();
 	}
 }
